@@ -250,8 +250,6 @@ def main() -> int:
         print()
         print(sw.report(n_done, total))
 
-    # The output directory must contain ONLY restored .npy files — the evaluator may iterate it
-    # blindly, so no sidecar files are written there.
     timing_path = args.timing_json or (_ROOT / "results" / "inference_timing.json")
     timing_path.parent.mkdir(parents=True, exist_ok=True)
     timing_path.write_text(json.dumps({
