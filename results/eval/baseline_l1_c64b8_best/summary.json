@@ -1,0 +1,34 @@
+{
+  "checkpoint": "weights/baseline_l1_c64b8_best.pt",
+  "arch": "tiny",
+  "params": 298372,
+  "epoch": 58,
+  "clamped": true,
+  "all": {
+    "n": 320,
+    "psnr": 28.361582499999997,
+    "ssim": 0.7687106874999999,
+    "lpips": 0.30552778125,
+    "psnr_bilinear": 24.9534065625,
+    "ssim_bilinear": 0.62145915625,
+    "lpips_bilinear": 0.3842330625
+  },
+  "clean": {
+    "n": 311,
+    "psnr": 28.633935369774917,
+    "ssim": 0.7813980385852091,
+    "lpips": 0.29550154340836016,
+    "psnr_bilinear": 25.139462057877815,
+    "ssim_bilinear": 0.6286752733118971,
+    "lpips_bilinear": 0.3751167202572347
+  },
+  "degenerate_only": {
+    "n": 9,
+    "psnr": 18.950277777777774,
+    "ssim": 0.3302922222222222,
+    "lpips": 0.6519900000000001,
+    "psnr_bilinear": 18.524155555555556,
+    "ssim_bilinear": 0.3721022222222222,
+    "lpips_bilinear": 0.6992533333333334
+  }
+}

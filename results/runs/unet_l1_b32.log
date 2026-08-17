@@ -1,0 +1,93 @@
+{
+  "name": "unet_l1_b32",
+  "epochs": 60,
+  "batch_size": 16,
+  "lr": 0.0005,
+  "arch": "unet",
+  "channels": 64,
+  "blocks": 8,
+  "base": 32,
+  "blocks_per_level": 2,
+  "seed": 42,
+  "device": "mps",
+  "workers": 0,
+  "no_augment": false,
+  "no_cache": false,
+  "no_clamp_eval": false,
+  "val_every": 1,
+  "torch": "2.11.0",
+  "started": "2026-08-15T23:40:37"
+}
+
+data: 2880 train / 320 val (9 degenerate in val) loaded in 2.2s
+bilinear x2 floor:  all PSNR 24.953 dB  SSIM 0.6215   |  clean PSNR 25.139 dB  SSIM 0.6287
+model: unet base32/bpl2, 1,156,164 params
+
+epoch   1/60  train_l1 0.03717  | all 27.564 dB / 0.7494  | clean 27.818 dB / 0.7625  |  43.9s  <- best
+epoch   2/60  train_l1 0.03381  | all 27.855 dB / 0.7571  | clean 28.115 dB / 0.7697  |  44.4s  <- best
+epoch   3/60  train_l1 0.03281  | all 28.193 dB / 0.7632  | clean 28.463 dB / 0.7758  |  52.9s  <- best
+epoch   4/60  train_l1 0.03209  | all 28.284 dB / 0.7693  | clean 28.557 dB / 0.7818  |  57.7s  <- best
+epoch   5/60  train_l1 0.03164  | all 28.444 dB / 0.7711  | clean 28.719 dB / 0.7838  |  55.4s  <- best
+epoch   6/60  train_l1 0.03138  | all 28.499 dB / 0.7746  | clean 28.778 dB / 0.7870  |  55.4s  <- best
+epoch   7/60  train_l1 0.03122  | all 28.543 dB / 0.7708  | clean 28.820 dB / 0.7835  |  53.9s  <- best
+epoch   8/60  train_l1 0.03104  | all 28.571 dB / 0.7728  | clean 28.845 dB / 0.7853  |  53.1s  <- best
+epoch   9/60  train_l1 0.03095  | all 28.605 dB / 0.7763  | clean 28.880 dB / 0.7881  |  54.5s  <- best
+epoch  10/60  train_l1 0.03085  | all 28.631 dB / 0.7746  | clean 28.906 dB / 0.7868  |  52.9s  <- best
+epoch  11/60  train_l1 0.03074  | all 28.653 dB / 0.7776  | clean 28.929 dB / 0.7898  |  52.7s  <- best
+epoch  12/60  train_l1 0.03067  | all 28.648 dB / 0.7716  | clean 28.924 dB / 0.7841  |  52.9s
+epoch  13/60  train_l1 0.03060  | all 28.719 dB / 0.7766  | clean 28.996 dB / 0.7890  |  53.3s  <- best
+epoch  14/60  train_l1 0.03049  | all 28.722 dB / 0.7763  | clean 29.002 dB / 0.7888  |  51.9s  <- best
+epoch  15/60  train_l1 0.03049  | all 28.711 dB / 0.7781  | clean 28.989 dB / 0.7903  |  51.9s
+epoch  16/60  train_l1 0.03046  | all 28.757 dB / 0.7785  | clean 29.036 dB / 0.7909  |  51.7s  <- best
+epoch  17/60  train_l1 0.03034  | all 28.771 dB / 0.7815  | clean 29.050 dB / 0.7934  |  53.7s  <- best
+epoch  18/60  train_l1 0.03033  | all 28.783 dB / 0.7785  | clean 29.062 dB / 0.7910  |  58.3s  <- best
+epoch  19/60  train_l1 0.03027  | all 28.797 dB / 0.7794  | clean 29.075 dB / 0.7915  |  59.4s  <- best
+epoch  20/60  train_l1 0.03028  | all 28.798 dB / 0.7827  | clean 29.076 dB / 0.7946  |  63.2s  <- best
+epoch  21/60  train_l1 0.03020  | all 28.823 dB / 0.7812  | clean 29.102 dB / 0.7935  |  60.5s  <- best
+epoch  22/60  train_l1 0.03016  | all 28.850 dB / 0.7822  | clean 29.129 dB / 0.7941  |  60.4s  <- best
+epoch  23/60  train_l1 0.03010  | all 28.849 dB / 0.7823  | clean 29.127 dB / 0.7942  |  58.9s
+epoch  24/60  train_l1 0.03010  | all 28.819 dB / 0.7820  | clean 29.096 dB / 0.7940  |  61.0s
+epoch  25/60  train_l1 0.03010  | all 28.868 dB / 0.7817  | clean 29.148 dB / 0.7939  |  61.4s  <- best
+epoch  26/60  train_l1 0.03002  | all 28.872 dB / 0.7817  | clean 29.152 dB / 0.7940  |  63.7s  <- best
+epoch  27/60  train_l1 0.02998  | all 28.885 dB / 0.7822  | clean 29.166 dB / 0.7948  |  61.8s  <- best
+epoch  28/60  train_l1 0.02995  | all 28.878 dB / 0.7818  | clean 29.158 dB / 0.7941  |  55.8s
+epoch  29/60  train_l1 0.02993  | all 28.886 dB / 0.7827  | clean 29.167 dB / 0.7951  |  58.8s  <- best
+epoch  30/60  train_l1 0.02990  | all 28.897 dB / 0.7833  | clean 29.177 dB / 0.7952  |  57.4s  <- best
+epoch  31/60  train_l1 0.02988  | all 28.912 dB / 0.7845  | clean 29.191 dB / 0.7963  |  55.7s  <- best
+epoch  32/60  train_l1 0.02985  | all 28.910 dB / 0.7837  | clean 29.190 dB / 0.7956  |  56.8s
+epoch  33/60  train_l1 0.02982  | all 28.905 dB / 0.7825  | clean 29.184 dB / 0.7944  |  56.2s
+epoch  34/60  train_l1 0.02981  | all 28.897 dB / 0.7835  | clean 29.176 dB / 0.7950  |  55.0s
+epoch  35/60  train_l1 0.02979  | all 28.922 dB / 0.7833  | clean 29.203 dB / 0.7956  |  57.4s  <- best
+epoch  36/60  train_l1 0.02975  | all 28.934 dB / 0.7860  | clean 29.214 dB / 0.7978  |  56.7s  <- best
+epoch  37/60  train_l1 0.02974  | all 28.928 dB / 0.7841  | clean 29.207 dB / 0.7958  |  56.2s
+epoch  38/60  train_l1 0.02969  | all 28.945 dB / 0.7860  | clean 29.225 dB / 0.7976  |  61.2s  <- best
+epoch  39/60  train_l1 0.02968  | all 28.944 dB / 0.7835  | clean 29.225 dB / 0.7960  |  63.2s
+epoch  40/60  train_l1 0.02967  | all 28.951 dB / 0.7864  | clean 29.231 dB / 0.7982  |  61.5s  <- best
+epoch  41/60  train_l1 0.02965  | all 28.953 dB / 0.7854  | clean 29.232 dB / 0.7971  |  60.8s  <- best
+epoch  42/60  train_l1 0.02963  | all 28.956 dB / 0.7866  | clean 29.235 dB / 0.7983  |  60.9s  <- best
+epoch  43/60  train_l1 0.02961  | all 28.973 dB / 0.7849  | clean 29.253 dB / 0.7969  |  58.4s  <- best
+epoch  44/60  train_l1 0.02958  | all 28.972 dB / 0.7867  | clean 29.252 dB / 0.7983  |  55.1s
+epoch  45/60  train_l1 0.02957  | all 28.980 dB / 0.7865  | clean 29.260 dB / 0.7983  |  56.0s  <- best
+epoch  46/60  train_l1 0.02956  | all 28.982 dB / 0.7867  | clean 29.263 dB / 0.7985  |  60.3s  <- best
+epoch  47/60  train_l1 0.02954  | all 28.978 dB / 0.7854  | clean 29.258 dB / 0.7974  |  62.6s
+epoch  48/60  train_l1 0.02952  | all 28.988 dB / 0.7869  | clean 29.269 dB / 0.7988  |  62.4s  <- best
+epoch  49/60  train_l1 0.02951  | all 28.985 dB / 0.7867  | clean 29.266 dB / 0.7983  |  62.1s
+epoch  50/60  train_l1 0.02951  | all 28.990 dB / 0.7858  | clean 29.271 dB / 0.7976  |  60.5s  <- best
+epoch  51/60  train_l1 0.02950  | all 28.990 dB / 0.7858  | clean 29.271 dB / 0.7977  |  62.9s
+epoch  52/60  train_l1 0.02948  | all 28.993 dB / 0.7869  | clean 29.273 dB / 0.7986  |  61.2s  <- best
+epoch  53/60  train_l1 0.02947  | all 28.997 dB / 0.7870  | clean 29.277 dB / 0.7987  |  65.4s  <- best
+epoch  54/60  train_l1 0.02947  | all 28.998 dB / 0.7867  | clean 29.279 dB / 0.7984  |  58.3s  <- best
+epoch  55/60  train_l1 0.02946  | all 29.000 dB / 0.7872  | clean 29.280 dB / 0.7988  |  56.0s  <- best
+epoch  56/60  train_l1 0.02946  | all 29.001 dB / 0.7868  | clean 29.281 dB / 0.7985  |  54.8s  <- best
+epoch  57/60  train_l1 0.02946  | all 29.001 dB / 0.7867  | clean 29.282 dB / 0.7984  |  57.0s  <- best
+epoch  58/60  train_l1 0.02946  | all 29.001 dB / 0.7866  | clean 29.281 dB / 0.7983  |  58.0s
+epoch  59/60  train_l1 0.02945  | all 29.002 dB / 0.7870  | clean 29.283 dB / 0.7987  |  62.1s  <- best
+epoch  60/60  train_l1 0.02945  | all 29.002 dB / 0.7870  | clean 29.283 dB / 0.7987  |  59.4s
+
+==============================================================================
+best epoch 59  (1,156,164 params)
+  ALL   (320 pairs)  PSNR 29.002 dB  SSIM 0.7870   (bilinear 24.953 / 0.6215, +4.049 dB)
+  CLEAN (311 pairs)  PSNR 29.283 dB  SSIM 0.7987   (bilinear 25.139 / 0.6287, +4.144 dB)
+  checkpoint: /Users/anshuman/kla-restoration/weights/unet_l1_b32_best.pt
+  metrics:    /Users/anshuman/kla-restoration/results/runs/unet_l1_b32/metrics.csv
+==============================================================================

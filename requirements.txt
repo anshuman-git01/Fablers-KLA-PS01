@@ -1,0 +1,26 @@
+# KLA PS01 — AI-Based Restoration of Degraded Images
+# Exact versions as installed in the environment that produced the submitted checkpoint.
+#
+# torchvision==0.26.0 declares torch==2.11.0, so this file pins the whole stack coherently:
+#   pip install -r requirements.txt
+# resolves to torch 2.11.0 and will NOT silently upgrade it.
+#
+# NOTE: installing torchvision/lpips UNPINNED resolves to torch 2.13.0. Always use these pins.
+#
+# A complete `pip freeze` of the full development machine is in requirements-freeze.txt.
+
+# --- core ---
+torch==2.11.0
+numpy==2.4.2
+
+# --- LPIPS perceptual loss + metric (pulls torchvision, which pins torch) ---
+lpips==0.1.4
+torchvision==0.26.0
+
+# --- lpips runtime dependencies (pinned as installed) ---
+scipy==1.17.1
+tqdm==4.67.3
+pillow==12.1.1
+
+# --- figures / reporting ---
+matplotlib==3.10.8

@@ -1,0 +1,28 @@
+[2026-08-16 02:23:34] === overnight chain started (pid 26475) ===
+[2026-08-16 02:23:34] waiting for unet_l1_b48 to finish...
+[2026-08-16 02:56:35] unet_l1_b48 finished
+[2026-08-16 02:56:45] starting unet_ssimlpips_b32 (L1+SSIM+LPIPS, base32, 60 epochs)
+[2026-08-16 04:07:03] unet_ssimlpips_b32 exited with code 0
+[2026-08-16 04:07:03] eval_report on weights/unet_l1_b48_best.pt
+checkpoint: weights/unet_l1_b48_best.pt  (epoch 60, 2,599,012 params, arch unet)
+device: mps   clamp output to [0,1]: True
+
+  all              n=320  PSNR 29.083 dB  SSIM 0.7894   (bilinear 24.953 / 0.6215, +4.129 dB)
+  clean            n=311  PSNR 29.364 dB  SSIM 0.8009   (bilinear 25.139 / 0.6287, +4.225 dB)
+  degenerate_only  n=  9  PSNR 19.360 dB  SSIM 0.3928   (bilinear 18.524 / 0.3721, +0.836 dB)
+
+wrote /Users/anshuman/kla-restoration/results/eval/unet_l1_b48_best/per_image_metrics.csv
+      /Users/anshuman/kla-restoration/results/eval/unet_l1_b48_best/summary.json, best_cases.png, worst_cases.png
+[2026-08-16 04:07:09]   -> exit 0
+[2026-08-16 04:07:09] eval_report on weights/unet_ssimlpips_b32_best.pt
+checkpoint: weights/unet_ssimlpips_b32_best.pt  (epoch 39, 1,156,164 params, arch unet)
+device: mps   clamp output to [0,1]: True
+
+  all              n=320  PSNR 28.680 dB  SSIM 0.7833   (bilinear 24.953 / 0.6215, +3.726 dB)
+  clean            n=311  PSNR 28.955 dB  SSIM 0.7943   (bilinear 25.139 / 0.6287, +3.816 dB)
+  degenerate_only  n=  9  PSNR 19.165 dB  SSIM 0.4032   (bilinear 18.524 / 0.3721, +0.640 dB)
+
+wrote /Users/anshuman/kla-restoration/results/eval/unet_ssimlpips_b32_best/per_image_metrics.csv
+      /Users/anshuman/kla-restoration/results/eval/unet_ssimlpips_b32_best/summary.json, best_cases.png, worst_cases.png
+[2026-08-16 04:07:12]   -> exit 0
+[2026-08-16 04:07:12] === overnight chain complete ===

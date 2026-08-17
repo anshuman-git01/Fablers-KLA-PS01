@@ -1,0 +1,17 @@
+{
+  "name": "baseline_l1_c64b8",
+  "epochs": 60,
+  "batch_size": 16,
+  "lr": 0.0005,
+  "channels": 64,
+  "blocks": 8,
+  "seed": 42,
+  "device": "mps",
+  "workers": 0,
+  "no_augment": false,
+  "no_cache": false,
+  "no_clamp_eval": false,
+  "val_every": 1,
+  "torch": "2.11.0",
+  "started": "2026-08-15T22:26:04"
+}

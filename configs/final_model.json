@@ -1,0 +1,60 @@
+{
+  "final_model": true,
+  "locked": "2026-08-16",
+  "checkpoint": "weights/unet_ssimlpips_b32_best.pt",
+  "checkpoint_sha256": "8f5a6ea9cd09b48e8c25f25480b40860156a0124a72eb8e7b68d1763d5f81398",
+  "checkpoint_bytes": 4645083,
+  "epoch": 39,
+  "n_params": 1156164,
+  "architecture": {
+    "name": "unet",
+    "base": 32,
+    "blocks_per_level": 2,
+    "scale": 2,
+    "receptive_field_px": 97,
+    "notes": "U-Net encoder-decoder, residual on bilinear x2 upsample, zero-init PixelShuffle head"
+  },
+  "loss": {
+    "name": "l1_ssim_lpips",
+    "w_l1": 1.0,
+    "w_ssim": 0.15,
+    "w_lpips": 0.1
+  },
+  "training": {
+    "epochs": 60,
+    "batch_size": 16,
+    "lr": 0.0005,
+    "seed": 42,
+    "device": "mps",
+    "torch": "2.11.0"
+  },
+  "augmentation": "dihedral (8 transforms), applied identically to input and target",
+  "data": {
+    "train_pairs": 2880,
+    "val_pairs": 320,
+    "split_seed": 42,
+    "degenerate_pairs_kept_in_training": true
+  },
+  "postprocessing": "output clamped to [0,1]",
+  "validation_metrics": {
+    "all": {
+      "n": 320,
+      "psnr": 28.679776562500003,
+      "ssim": 0.78328171875,
+      "lpips": 0.15557434374999998,
+      "psnr_bilinear": 24.9534065625,
+      "ssim_bilinear": 0.62145915625,
+      "lpips_bilinear": 0.3842330625
+    },
+    "clean": {
+      "n": 311,
+      "psnr": 28.95513762057878,
+      "ssim": 0.794281961414791,
+      "lpips": 0.15272842443729903,
+      "psnr_bilinear": 25.139462057877815,
+      "ssim_bilinear": 0.6286752733118971,
+      "lpips_bilinear": 0.3751167202572347
+    }
+  },
+  "selection_criterion_note": "trained before --select combined existed; ranked #1 of 4 under it"
+}

@@ -1,0 +1,34 @@
+{
+  "checkpoint": "weights/unet_ssimlpips_b32_best.pt",
+  "arch": "unet",
+  "params": 1156164,
+  "epoch": 39,
+  "clamped": true,
+  "all": {
+    "n": 320,
+    "psnr": 28.679776562500003,
+    "ssim": 0.78328171875,
+    "lpips": 0.15557434374999998,
+    "psnr_bilinear": 24.9534065625,
+    "ssim_bilinear": 0.62145915625,
+    "lpips_bilinear": 0.3842330625
+  },
+  "clean": {
+    "n": 311,
+    "psnr": 28.95513762057878,
+    "ssim": 0.794281961414791,
+    "lpips": 0.15272842443729903,
+    "psnr_bilinear": 25.139462057877815,
+    "ssim_bilinear": 0.6286752733118971,
+    "lpips_bilinear": 0.3751167202572347
+  },
+  "degenerate_only": {
+    "n": 9,
+    "psnr": 19.16452222222222,
+    "ssim": 0.4031622222222222,
+    "lpips": 0.2539166666666667,
+    "psnr_bilinear": 18.524155555555556,
+    "ssim_bilinear": 0.3721022222222222,
+    "lpips_bilinear": 0.6992533333333334
+  }
+}
